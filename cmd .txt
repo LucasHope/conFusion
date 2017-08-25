@@ -1,0 +1,55 @@
+GIT
+
+=> git-scm.com
+git --version
+git config --global user.name "Name"
+git config --global user.email <email@>
+git config --list
+
+==> in folder cmd
+git init
+git status
+git add .
+git commit -m "commitName"
+git log --oneline
+
+=> checkout from earlier commit
+git checkout <commit number> index.html
+
+=> reset changes since last commit
+git reset HEAD index.html
+git checkout -- index.html
+
+=> online repository (github)
+git remote add origin <URL>
+git push -u origin master
+git clone <URL>
+
+
+NODE / NPM / Modules
+
+=> nodejs.org
+node -v
+npm -v
+
+=> new .gitignore-file (what to ignore)
+node_modules
+
+=> general modules / package.json devDependencies
+npm install
+
+=> installing a module and adding to package.json
+npm install bootstrap@4.0.0-alpha.6 --save
+npm install font-awesome --save
+
+Bootstrap-social @ http://lipis.github.io/bootstrap-social/
+
+
+LESS / SASS
+
+npm install -g less
+lessc styles.less styles.css
+
+npm install --save-dev node-sass
+json: "scss": "node-sass -o css/ css/"
+npm run scss
