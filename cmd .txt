@@ -44,6 +44,13 @@ npm install font-awesome --save
 
 Bootstrap-social @ http://lipis.github.io/bootstrap-social/
 
+=> watching for Changes and Parallelshell
+=> onchange & parallelshell
+npm install --save-dev onchange parallelshell
+json:   "watch:scss": "onchange 'css/*.scss' -- npm run scss",
+        "watch:all": "parallelshell 'npm run watch:scss' 'npm run lite'"
+npm start
+
 
 LESS / SASS
 
@@ -51,5 +58,5 @@ npm install -g less
 lessc styles.less styles.css
 
 npm install --save-dev node-sass
-json: "scss": "node-sass -o css/ css/"
+json:   "scss": "node-sass -o css/ css/"
 npm run scss
