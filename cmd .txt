@@ -44,12 +44,43 @@ npm install font-awesome --save
 
 Bootstrap-social @ http://lipis.github.io/bootstrap-social/
 
-=> watching for Changes and Parallelshell
-=> onchange & parallelshell
+=> watching for Changes and Parallelshell - onchange & parallelshell
 npm install --save-dev onchange parallelshell
 json:   "watch:scss": "onchange 'css/*.scss' -- npm run scss",
         "watch:all": "parallelshell 'npm run watch:scss' 'npm run lite'"
 npm start
+
+
+DISTRIBUTION FOLDER
+
+=> Cleaning up a Distribution Folder - rimraf
+npm install --save-dev rimraf
+json:   "clean": "rimraf dist",
+
+=> Copying (fonts) - copyfiles
+npm -g install copyfiles
+json:   "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+
+=> Compressing and Minifying Images - imagemin-cli
+npm -g install imagemin-cli
+json:   "imagemin": "imagemin img/* -o dist/img",
+
+=> ignore + module installing to json/project
+.gitignore:     node_modules
+                dist
+npm install --save-dev usemin-cli cssmin uglifyjs htmlmin
+json:   "usemin": "usemin contactus.html -d dist --htmlmin -o dist/contactus.html && usemin aboutus.html -d dist --htmlmin -o dist/aboutus.html && usemin index.html -d dist --htmlmin -o dist/index.html",
+        "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin"
+
+=> surround .html css links inclusion code with 
+<!-- build:css css/main.css -->
+<link rel="stylesheet" href="">
+<!-- endbuild -->
+
+=> surround .html script inclusion code with
+<!-- build:js js/main.js -->
+<script src=""></script>
+<!-- endbuild -->
 
 
 LESS / SASS
