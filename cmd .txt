@@ -72,12 +72,12 @@ npm install --save-dev usemin-cli cssmin uglifyjs htmlmin
 json:   "usemin": "usemin contactus.html -d dist --htmlmin -o dist/contactus.html && usemin aboutus.html -d dist --htmlmin -o dist/aboutus.html && usemin index.html -d dist --htmlmin -o dist/index.html",
         "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin"
 
-=> surround .html css links inclusion code with 
+=> surround .html css links local inclusion code with 
 <!-- build:css css/main.css -->
 <link rel="stylesheet" href="">
 <!-- endbuild -->
 
-=> surround .html script inclusion code with
+=> surround .html script local inclusion code with
 <!-- build:js js/main.js -->
 <script src=""></script>
 <!-- endbuild -->
@@ -91,3 +91,10 @@ lessc styles.less styles.css
 npm install --save-dev node-sass
 json:   "scss": "node-sass -o css/ css/"
 npm run scss
+
+
+GRUNT
+
+=> Grunt CLI & Grund packages
+npm install -g grunt-cli
+npm install grunt --save-dev
