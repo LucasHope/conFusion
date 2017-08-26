@@ -98,3 +98,16 @@ GRUNT
 => Grunt CLI & Grund packages
 npm install -g grunt-cli
 npm install grunt --save-dev
+
+=> Grunt file w/ configuration
+Gruntfile.js
+
+=> Grunt modules (SCSS to CSS, time statistics, including modules as need)
+npm install grunt-sass time-grunt jit-grunt --save-dev
+=> (watch for changes to update css, live-refresh of page)
+npm install grunt-contrib-watch grunt-browser-sync --save-dev
+=> Grunt script
+
+Commands:
+grunt css
+grunt (default)
