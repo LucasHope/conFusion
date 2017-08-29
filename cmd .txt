@@ -44,11 +44,15 @@ npm install font-awesome --save
 
 Bootstrap-social @ http://lipis.github.io/bootstrap-social/
 
+=> lite-server, node-based development server live updating
+npm install lite-server --save-dev
+npm start   (development server start)
+
 => watching for Changes and Parallelshell - onchange & parallelshell
 npm install --save-dev onchange parallelshell
 json:   "watch:scss": "onchange 'css/*.scss' -- npm run scss",
         "watch:all": "parallelshell 'npm run watch:scss' 'npm run lite'"
-npm start
+npm start   (development server start)
 
 
 DISTRIBUTION FOLDER
@@ -95,19 +99,28 @@ npm run scss
 
 GRUNT
 
-=> Grunt CLI & Grund packages
+=> Grunt CLI & Grund packages (CLI = Command Line Interface)
 npm install -g grunt-cli
 npm install grunt --save-dev
 
 => Grunt file w/ configuration
-Gruntfile.js
+Gruntfile.js    (needs commands + scripts for modules to work!)
 
-=> Grunt modules (SCSS to CSS, time statistics, including modules as need)
+=> Grunt modules (SCSS to CSS, time statistics, including modules as need) + SCRIPTS!
 npm install grunt-sass time-grunt jit-grunt --save-dev
-=> (watch for changes to update css, live-refresh of page)
+=> (watch for changes to update css, live-refresh of page) + SCRIPTS!
 npm install grunt-contrib-watch grunt-browser-sync --save-dev
-=> Grunt script
+=> Grunt copy files to dist and clean dist (contrib-copy & contrib-clean) + SCRIPTS!
+npm install grunt-contrib-copy grunt-contrib-clean --save-dev
+=> Grunt imagemin (contrib-imagemin) + SCRIPTS!
+npm install grunt-contrib-imagemin --save-dev
+=> Grunt concat, cssmin, uglify, filerev, usemin + SCRIPTS!
+npm install grunt-contrib-concat grunt-contrib-cssmin grunt-contrib-uglify grunt-filerev grunt-usemin --save-dev
+
+=> After all scripts to Gruntfile.js w/ configurations and registering tasks
+grunt build
 
 Commands:
 grunt css
 grunt (default)
+
