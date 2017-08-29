@@ -40,6 +40,7 @@ npm install
 
 => installing a module and adding to package.json
 npm install bootstrap@4.0.0-alpha.6 --save
+npm install popper.js@1.11.0 --save
 npm install font-awesome jquery --save
 
 Bootstrap-social @ http://lipis.github.io/bootstrap-social/
@@ -155,15 +156,15 @@ JSON
 scripts IN CASE:
 
     "start": "npm run watch:all",
-    "scss": "node-sass -o css/ css/"
+    "scss": "node-sass -o css/ css/",
     "clean": "rimraf dist",
     "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
     "imagemin": "imagemin img/* -o dist/img",
+    "lite": "lite-server",
     "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
     "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\"",
     "usemin": "usemin contactus.html -d dist --htmlmin -o dist/contactus.html && usemin aboutus.html -d dist --htmlmin -o dist/aboutus.html && usemin index.html -d dist --htmlmin -o dist/index.html",
     "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin",
-    "lite": "lite-server"
 
 dev-dependencies:
     
