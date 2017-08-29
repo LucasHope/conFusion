@@ -40,7 +40,7 @@ npm install
 
 => installing a module and adding to package.json
 npm install bootstrap@4.0.0-alpha.6 --save
-npm install font-awesome --save
+npm install font-awesome jquery --save
 
 Bootstrap-social @ http://lipis.github.io/bootstrap-social/
 
